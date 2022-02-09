@@ -440,7 +440,6 @@ declare namespace WAWebJS {
         REVOKED = 'revoked',
         ORDER = 'order',
         PRODUCT = 'product',
-        PAYMENT = 'payment',
         UNKNOWN = 'unknown',
         GROUP_INVITE = 'groups_v4_invite',
         LIST = 'list',
@@ -727,6 +726,14 @@ declare namespace WAWebJS {
         data: string
         /** Document file name. Value can be null */
         filename?: string | null
+        /** Size of the file (for documents) */
+        size?: number | null
+        /** Duration of the file (for audio or video) */
+        duration?: number | null
+        /** Width of the file (for image or video)*/
+        width?: number | null
+        /** Width of the file (for image or video)*/
+        height?: number | null
 
         /**
          * @param {string} mimetype MIME type of the attachment
