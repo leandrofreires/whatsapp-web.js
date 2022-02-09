@@ -13,7 +13,7 @@ const { URL } = require('url');
  * @param {?string} filename Document file name
  */
 class MessageMedia {
-    constructor(mimetype, data, filename) {
+    constructor(mimetype, data, filename, size, duration, width, height) {
         /**
          * MIME type of the attachment
          * @type {string}
@@ -31,6 +31,29 @@ class MessageMedia {
          * @type {?string}
          */
         this.filename = filename;
+        /**
+         * Size of the file (for documents)
+         * @type {?number}
+         */
+         this.size = size;
+
+         /**
+         * Duration of the file (for audio or video)
+         * @type {?number}
+         */
+        this.duration = duration;
+
+        /**
+         * Width of the file (for image or video)
+         * @type {?number}
+         */
+         this.width = width;
+
+         /**
+         * Height of the file (for image or video)
+         * @type {?number}
+         */
+        this.height = height;
     }
 
     /**
