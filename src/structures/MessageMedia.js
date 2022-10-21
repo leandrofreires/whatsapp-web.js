@@ -14,7 +14,7 @@ const { URL } = require('url');
  * @param {?number} filesize Document file size in bytes. Value can be null
  */
 class MessageMedia {
-    constructor(mimetype, data, filename, filesize) {
+    constructor(mimetype, data, filename, filesize, duration, width, height) {
         /**
          * MIME type of the attachment
          * @type {string}
@@ -38,6 +38,24 @@ class MessageMedia {
          * @type {?number}
          */
         this.filesize = filesize;
+
+        /**
+         * Duration of the file (for audio or video)
+         * @type {?number}
+         */
+         this.duration = duration;
+
+         /**
+          * Width of the file (for image or video)
+          * @type {?number}
+          */
+          this.width = width;
+ 
+          /**
+          * Height of the file (for image or video)
+          * @type {?number}
+          */
+         this.height = height;
     }
 
     /**

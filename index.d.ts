@@ -848,6 +848,12 @@ declare namespace WAWebJS {
         filename?: string | null
         /** Document file size in bytes. Value can be null. */
         filesize?: number | null
+        /** Duration of the file (for audio or video) */
+        duration?: number | null
+        /** Width of the file (for image or video)*/
+        width?: number | null
+        /** Width of the file (for image or video)*/
+        height?: number | null
 
         /**
          * @param {string} mimetype MIME type of the attachment

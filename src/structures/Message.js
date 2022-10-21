@@ -416,7 +416,10 @@ class Message extends Base {
                     data,
                     mimetype: msg.mimetype,
                     filename: msg.filename,
-                    filesize: msg.size
+                    filesize: msg.size,
+                    duration: msg.duration,
+                    width: msg.width,
+                    height: msg.height,
                 };
             } catch (e) {
                 if(e.status && e.status === 404) return undefined;
@@ -425,7 +428,7 @@ class Message extends Base {
         }, this.id._serialized);
 
         if (!result) return undefined;
-        return new MessageMedia(result.mimetype, result.data, result.filename, result.filesize);
+        return new MessageMedia(result.mimetype, result.data, result.filename, result.filesize, result.duration, result.width, result.height);
     }
 
     /**
