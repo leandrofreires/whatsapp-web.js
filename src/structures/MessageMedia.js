@@ -43,19 +43,19 @@ class MessageMedia {
          * Duration of the file (for audio or video)
          * @type {?number}
          */
-         this.duration = duration;
+        this.duration = duration;
 
-         /**
+        /**
           * Width of the file (for image or video)
           * @type {?number}
           */
-          this.width = width;
+        this.width = width;
  
-          /**
+        /**
           * Height of the file (for image or video)
           * @type {?number}
           */
-         this.height = height;
+        this.height = height;
     }
 
     /**
